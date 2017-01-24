@@ -1,0 +1,64 @@
+
+.header, .footer {
+    height: 50px;
+    min-height: 50px;
+    max-height: 50px;
+}
+
+.mainBody{
+ height: 500px;
+ min-height: 500px;
+ max-height: 500px;
+
+}
+.firstRow{
+  height: 200px;
+  min-height: 200px;
+  max-height: 200px;
+
+}
+.upperThird{
+  height: 200px;
+  min-height: 200px;
+  max-height: 200px;
+
+}
+.col-md-7 lowerThird, .col-md-7 upperThird{
+  height: 200px;
+  min-height: 200px;
+  max-height: 200px;
+
+}
+.col-md-2 upperThird, col-md-2 upperThird{
+  height: 200px;
+  min-height: 200px;
+  max-height: 200px;
+
+}
+.lowerThird{
+  height: 200px;
+  min-height: 200px;
+  max-height: 200px;
+
+}
+
+.col-md-12 header {
+  height: 200px;
+  min-height: 200px;
+  max-height: 200px;
+
+}
+
+.col-md-12 {
+  height:200px;
+  min-height: 200px;
+  max-height: 200px;
+
+}
+
+.col-md-3 {
+  height:200px;
+  min-height: 200px;
+  max-height: 200px;
+
+}
