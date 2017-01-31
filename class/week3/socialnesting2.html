@@ -31,13 +31,35 @@
     }
     </style>
 
-<div class="container">
-<div class="row">
-<div class="col-md-12 randomColor Header">
 
-</div>
-</div>
-</div>
+  <body>
+    <div class="container">
+    <div class="row">
+      <div class="col-md-12 randomColor header">.col-md-12</div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-3 randomColor firstRow">.col-md-3</div>
+      <div class="col-md-7 randomColor firstRow">.col-md-7</div>
+      <div class="col-md-2 randomColor firstRow">.col-md-2</div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-3 randomColor upperThird">.col-md-3</div>
+      <div class="col-md-7 randomColor upperThird">.col-md-7</div>
+      <div class="col-md-2 randomColor upperThird">.col-md-2</div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 randomColor lowerThird">.col-md-3</div>
+      <div class="col-md-7 randomColor lowerThird">.col-md-7</div>
+      <div class="col-md-2 randomColor lowerThird">.col-md-2</div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 randomColor footer">.col-md-12</div>
+    </div>
+    </div>
+
 
 
     </style>
@@ -51,9 +73,32 @@
   </head>
   <body>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  </body>
-</html>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+        <script>
+            function getRandomNumber(min, max) {
+                return Math.floor(Math.random() * max + min);
+            }
+
+            $(document).ready(function() {
+
+                var bodyColumns = $(".randomColor");
+
+                bodyColumns.each(function() {
+
+                    $(this).css("background-color", "rgb(" + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + ")");
+
+                })
+
+                $("body").css("background-color", "rgb(" + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + ")");
+
+
+            })
+        </script>
+
+      </body>
+    </html>
