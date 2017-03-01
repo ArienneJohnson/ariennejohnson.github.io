@@ -1,0 +1,81 @@
+<doctype <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+
+  </head>
+  <body>
+
+hello world
+
+<div id="myDiv">
+look some text!
+</div>
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+<script>
+//alert("This is a popup");
+console.log("This is for debugging messages");
+var myVar;
+//in quotes us a string i.e text
+var myAnotherVar = "Here is my another var";
+//alert(myAnotherVar);
+
+//concatenation
+
+var myName = "Arienne";
+var myFirstName = "Arienne";
+var myLastName = "Johnson";
+//alert("My first name is" +myFirstName +"and my last name is"+myLastName);
+
+
+//{} is called a code block
+function sayMyName(){
+  //everything in code block will be  executed
+
+  console.log("Your name is "+myName);
+}
+//calling the function
+sayMyName();
+
+function sayMyName2(name){
+  //everything in code block will be  executed
+
+  console.log("Your name is "+myName);
+}
+//calling the function
+sayMyName2("Mark");
+//calling the function
+sayMyName2("Daniela");
+
+/*
+when the docu is ready, jQuery gets the elements with id myDiv and calls it
+html function html function will replace the html within the element
+*/
+$(document).ready(function(){
+  alert("the document is ready!");
+  $("#myDiv").html("Hey, I was able to change the DOM");
+  $("#myDiv").append("<br> add something more!");
+});
+
+
+</script>
+
+  </body>
+</html>
