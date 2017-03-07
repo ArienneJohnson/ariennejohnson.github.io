@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Week 8 - 4 Pics</title>
+
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <style media="screen">
+        .header,
+        .footer {
+            height: 150px;
+            max-height: 150px;
+            min-height: 150px;
+        }
+        
+        .row1 {
+            height: 600px;
+            max-height: 600px;
+            min-height: 600px;
+        }
+          .height2 {
+            height: 300px;
+            max-height: 300px;
+            min-height: 300px;
+        }
+        
+        img{
+            width: 100%;
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12 header hidden-xs randomColor">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2 row1 hidden-xs randomColor">
+            </div>
+
+            
+            
+            
+         <div class="col-md-8 row1 hidden-xs randomColor">
+          
+                    <div class="row">
+                    <div class="col-md-6 height2 randomColor">
+                        <img src="images/macApple1.jpg" alt="#" >
+                    </div>
+                        <div class="col-md-6 height2 randomColor">
+                        <img src="images/greenApple1.jpg" alt="#" >
+
+                        </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-md-6 height2 randomColor">
+                         <img src="images/redApple1.jpg" alt="#" >
+
+                        </div>
+                        <div class="col-md-6 height2 randomColor">
+                        <img src="images/greenApple1.jpg" alt="#" >
+
+                        </div>
+                    </div>
+                  </div>
+                <div class="col-md-2 row1 hidden-xs randomColor">
+                </div>
+            
+            
+            </div>
+                
+            </div>
+
+    <div class="row">
+            <div class="col-md-12 footer hidden-xs randomColor">
+            </div>
+    </div>
+
+        </div>
+
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+        <script>
+            function getRandomNumber(min, max) {
+                return Math.floor(Math.random() * max + min);
+            }
+
+            $(document).ready(function () {
+
+                var bodyColumns = $(".randomColor");
+
+                bodyColumns.each(function () {
+
+                    $(this).css("background-color", "rgb(" + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + ")");
+
+                })
+
+                $("body").css("background-color", "rgb(" + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + ")");
+
+
+            })
+        </script>
+</body>
+
+</html>
