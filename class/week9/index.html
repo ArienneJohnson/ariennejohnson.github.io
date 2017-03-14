@@ -21,14 +21,28 @@
 
 <body>
     
-    <div></div>
-<script>
-       
+    <div class="info">Customer Name: mark</div>
+    <div class="info">Credit Card:******5791</div>
+    <div class="info"></div>
+    <div class="info"></div>
+    <div class="info"></div>
+    
+
+ 
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <script>
+    /*   
         
     var myArray = [34, 878, 4, 14, 89, 90, 545, 88, 34, 67, 33]
         ///myArray[2]; 2
     var sum = 0;
          $(document).ready(function() {
+         */
             /* 
              for (var i = 0; i < myArray.length; i = i +1) {
                  var myMessage = "The value in myArray at spot" + i + " is " 
@@ -41,6 +55,7 @@
         
          
          */
+    /*
              var product = myArray[0];
                for (var i = 1; i < myArray.length; i = i +1) {
                    
@@ -49,48 +64,34 @@
                     $("body").append("<div>The Product is" + product + "/div");
                }
               })
+         */
          
-       //Get average of numbers without loop
-       /* $(document).ready(function() {
-            var numArr = [3, 5, 7, 3, 8, 9];
-            $("#results").append("<div>Values in Array</div>");
-            for (var i = 0; i < numArr.length; i++) {
-                $("#results").append("<div>" + numArr[i] + "</div>");
+
+        var car = {
+            type: "SUV",
+            price: 45000,
+            mileage: 24,
+            color: "magenta",
+            fullType: "electric",
+            src: "../week8/car1.jpg"
             }
-            var player = {
-                "name": "Matthews",
-                "age": 19,
-                "team": "Toronto",
-                "points": 58,
-                "gamesPlayed": 60,
-                "position": "C"
-            }
-            $("#results").append("<div>Key Value Pairs in Array</div>");
-            for (key in player) {
-                $("#results").append("<div>" + key + " : " + player[key] + "</div>");
-            }
-            //array of objects
-            /*
-            <div class="num">4</div>
-              <div class="num">5</div>
-              <div class="num">6</div>
-              <div class="num">4</div>
-              <div class="num">5</div>
-            //notice that .num is a parameter to a function
-              $(".num").each(function(){
-                console.log($(this).text());
-              })
-               });
-            */
+        
+        for (var key in car) {
+            
+            $("body").append("<div>Key name is" +key +"and value is "+car[key]+"</div>");
+        }
+            
+        
+//var infoDivs = $(".info");   
+        $(".info").each(function(){
+            console.log("The text of this div is" +$(this).text());
+        });
+        
+               
+        
              
     </script>
 
- 
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 
 </html>
