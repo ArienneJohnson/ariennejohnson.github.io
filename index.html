@@ -5,92 +5,136 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Week9</title>
+    <title>Home Page</title>
 
     <!-- Bootstrap -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="cover.css">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
 
 <body>
-    
-    <div></div>
-<script>
-       
-        
-    var myArray = [34, 878, 4, 14, 89, 90, 545, 88, 34, 67, 33]
-        ///myArray[2]; 2
-    var sum = 0;
-         $(document).ready(function() {
-            /* 
-             for (var i = 0; i < myArray.length; i = i +1) {
-                 var myMessage = "The value in myArray at spot" + i + " is " 
-                 sum = sum + myArray[i];
-                 console.log(myMessage);
-                 $("body").append("<div>" + myMessage + "/div");
-                
-             }
-             $("body").append("<div>The total is " + sum + "</div>");
-        
-         
-         */
-             var product = myArray[0];
-               for (var i = 1; i < myArray.length; i = i +1) {
-                   
-                   product = product + myArray[i];
-                   
-                    $("body").append("<div>The Product is" + product + "/div");
-               }
-              })
-         
-       //Get average of numbers without loop
-       /* $(document).ready(function() {
-            var numArr = [3, 5, 7, 3, 8, 9];
-            $("#results").append("<div>Values in Array</div>");
-            for (var i = 0; i < numArr.length; i++) {
-                $("#results").append("<div>" + numArr[i] + "</div>");
-            }
-            var player = {
-                "name": "Matthews",
-                "age": 19,
-                "team": "Toronto",
-                "points": 58,
-                "gamesPlayed": 60,
-                "position": "C"
-            }
-            $("#results").append("<div>Key Value Pairs in Array</div>");
-            for (key in player) {
-                $("#results").append("<div>" + key + " : " + player[key] + "</div>");
-            }
-            //array of objects
-            /*
-            <div class="num">4</div>
-              <div class="num">5</div>
-              <div class="num">6</div>
-              <div class="num">4</div>
-              <div class="num">5</div>
-            //notice that .num is a parameter to a function
-              $(".num").each(function(){
-                console.log($(this).text());
-              })
-               });
-            */
-             
-    </script>
+    <img id="myBackgroundImage" src="forestlight.jpg">
+    <div class="site-wrapper">
 
- 
+        <div class="site-wrapper-inner">
+
+            <div class="cover-container">
+
+                <div class="masthead clearfix">
+                    <div class="inner">
+                        <h3 class="masthead-brand">Arienne Johnson</h3>
+                        <nav>
+                            <ul class="nav masthead-nav">
+                              <li role="presentation" class="dropdown">
+                              <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                Students A-H<span class="caret"></span>
+                              </a>
+                              <ul class="dropdown-menu">
+                                <li><a target="_blank" href="http://andersonguelphjs.github.io">Anderson</a></li>
+                                <li class="divider"></li>
+                                <li><a target="_blank" href="http://cc38cheung.github.io">Cheung, Colleen </a></li>
+                                <li><a target="_blank" href="http://shaleco.github.io">Cockhill, Shelby</a></li>
+                                <li><a target="_blank" href="https://xcox01.github.io/">Cox, Xavian</a></li>
+                                <li><a target="_blank" href="http://kheilacruz.github.io">Cruz, Anya</a></li>
+                                <li><a target="_blank" href="http://eduran123.github.io">Durant, Emma</a></li>
+                                <li><a target="_blank" href="#">*Federici, Nikola</a></li>
+                                <li><a target="_blank" href="http://Destany96.github.io">Filicetti, Destany</a></li>
+                                <li><a target="_blank" href="http://cassfloroff.github.io">Floroff, Cassandra</a></li>
+                                <li><a target="_blank" href="http://kfuoco.github.io">Fuoco, Kayla</a></li>
+                                <li><a target="_blank" href="https://syomag.github.io/">Gebremichael, Syoma</a></li>
+                                <li><a target="_blank" href="https://andrewgreergh.github.io/">Greer, Andrew</a></li>
+                                <li><a target="_blank" href="http://cool1828.github.io">Haig, Cheyanne</a></li>
+                                <li><a target="_blank" href="http://lifeguardwriter.github.io">Hutchison, Megan</a></li>
+                              </ul>
+                          </li>
+                          <li role="presentation" class="dropdown">
+                              <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                Students I-P<span class="caret"></span>
+                              </a>
+                              <ul class="dropdown-menu">
+                                <li><a target="_blank" href="http://jasmineirven.github.io">Irven, Jasmine</a></li>
+                                <li><a target="_blank" href="http://ariennejohnson.github.io">Johnson, Arienne</a></li>
+                                <li><a target="_blank" href="http://uhm-julian.github.io">Klimczyk, Julian</a></li>
+                                <li><a target="_blank" href="http://sydlaw.github.io">Lawson, Sydney</a></li>
+                                <li><a target="_blank" href="http://bradleymalecki.github.io">Malecki, Bradley</a></li>
+                                <li><a target="_blank" href="http://norrcon.github.io">McLeod, Connor</a></li>
+                                <li><a target="_blank" href="http://jnoble01.github.io">Nobleza, Jason</a></li>
+                                <li><a target="_blank" href="http://coleynovs.github.io">Novia, Nicole</a></li>
+                                <li><a target="_blank" href="http://saranovs.github.io">Novia, Sara</a></li>
+                                <li><a target="_blank" href="http://meerap5.github.io">Patel, Meera</a></li>
+                                <li><a target="_blank" href="http://rpaul03.github.io">Paul, Robert</a></li>
+                                <li><a target="_blank" href="http://dpiano.github.io">Piano, David</a></li>
+                                <li><a target="_blank" href="http://aneshapremraj.github.io">Premraj, Anesha</a></li>
+                              </ul>
+                          </li>
+                            <li role="presentation" class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                  Students Q-Z<span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a target="_blank" href="https://danielaracco.github.io/">Racco, Daniela</a></li>
+                                    <li><a target="_blank" href="http://crober25.github.io">Robertson, Calen</a></li>
+                                    <li><a target="_blank" href="http://erowel01.github.io">Rowell, Evan</a></li>
+                                    <li><a target="_blank" href="http://amanddaas.github.io">Saglioccolo, Amanda</a></li>
+                                    <li><a target="_blank" href="http://osala00.github.io">Sala, Olivia</a></li>
+                                    <li><a target="_blank" href="http://BeccaSam.github.io">Samborsky, Rebecca</a></li>
+                                    <li><a target="_blank" href="http://nbwells.github.io">Wells, Nicole</a></li>
+                                    <li><a target="_blank" href="http://szarne01.github.io">Zarnett-Klein, Sarah</a></li>
+                                </ul>
+                            </li>
+                                <li role="presentation" class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                      My Pages <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+
+                                        <li><a target="_blank" href="https://github.com/ariennejohnson/ariennejohnson.github.io">My Repo</a></li>
+                                        <li><a target="_blank" href="Class/week2">Week 2</a></li>
+                                        <li><a target="_blank" href="Class/week3/">Week 3</a></li>
+                                        <li><a target="_blank" href="Class/week4">Week 4</a></li>
+                                        <li><a target="_blank" href="Class/week5">Week 5</a></li>
+                                        <li><a target="_blank" href="Class/week6">Week 6</a></li>
+                                        <li><a target="_blank" href="Class/vShinpo">Vancouver Shinpo</a></li>
+                                        <li><a target="_blank" href="Class/week7">Week 7</a></li>
+                                        <li><a target="_blank" href="Class/week8">Week 8</a></li>
+                                        <li><a target="_blank" href="Class/week9">Week 9</a></li>
+                                        <li><a target="_blank" href="Presentations/week2">Presentations Week 2</a>  </li>
+                                        <li><a target="_blank" href="Presentations/week3">Presentations Week 3</a>  </li>
+                                        <li><a target="_blank" href="Presentations/week4">Presentations Week 4</a>  </li>
+                                        <li><a target="_blank" href="Presentations/week5">Presentations Week 5</a>  </li>
+                                        <li><a target="_blank" href="Presentations/week6">Presentations Week 6</a></li>
+                                        <li><a target="_blank" href="Presentations/week7">Presentations Week 7</a>  </li>
+                                        <li><a target="_blank" href="Presentations/week8">Presentations Week 8</a>  </li>
+                                        <li><a target="_blank" href="Presentations/week9">Presentations Week 9</a>  </li>
+
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="inner cover">
+                    <h1 class="cover-heading">Web Design for Digital Communications II</h1>
+                    <p class="lead">University of Guelph-Humber</p>
+                </div>
+
+                <div class="mastfoot">
+                    <div class="inner">
+                        <p>MDST 3350 Winter 2017</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 
 </html>

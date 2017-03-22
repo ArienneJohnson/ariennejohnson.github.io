@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Week9</title>
+
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    
+    <div></div>
+<script>
+       
+        
+    var myArray = [34, 878, 4, 14, 89, 90, 545, 88, 34, 67, 33]
+        ///myArray[2]; 2
+    var sum = 0;
+         $(document).ready(function() {
+            /* 
+             for (var i = 0; i < myArray.length; i = i +1) {
+                 var myMessage = "The value in myArray at spot" + i + " is " 
+                 sum = sum + myArray[i];
+                 console.log(myMessage);
+                 $("body").append("<div>" + myMessage + "/div");
+                
+             }
+             $("body").append("<div>The total is " + sum + "</div>");
+        
+         
+         */
+             var product = myArray[0];
+               for (var i = 1; i < myArray.length; i = i +1) {
+                   
+                   product = product + myArray[i];
+                   
+                    $("body").append("<div>The Product is" + product + "/div");
+               }
+              })
+         
+       //Get average of numbers without loop
+       /* $(document).ready(function() {
+            var numArr = [3, 5, 7, 3, 8, 9];
+            $("#results").append("<div>Values in Array</div>");
+            for (var i = 0; i < numArr.length; i++) {
+                $("#results").append("<div>" + numArr[i] + "</div>");
+            }
+            var player = {
+                "name": "Matthews",
+                "age": 19,
+                "team": "Toronto",
+                "points": 58,
+                "gamesPlayed": 60,
+                "position": "C"
+            }
+            $("#results").append("<div>Key Value Pairs in Array</div>");
+            for (key in player) {
+                $("#results").append("<div>" + key + " : " + player[key] + "</div>");
+            }
+            //array of objects
+            /*
+            <div class="num">4</div>
+              <div class="num">5</div>
+              <div class="num">6</div>
+              <div class="num">4</div>
+              <div class="num">5</div>
+            //notice that .num is a parameter to a function
+              $(".num").each(function(){
+                console.log($(this).text());
+              })
+               });
+            */
+             
+    </script>
+
+ 
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+
+</html>

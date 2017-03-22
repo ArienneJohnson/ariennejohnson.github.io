@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Posts</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+
+</head>
+<style media="screen">
+  .footer {
+    height: 100px;
+    min-height: 100px;
+    max-height: 100px;
+  }
+  #posts {
+    min-height: 200px;
+  }
+  .ads {
+    height: 200px;
+    min-height: 200px;
+    max-height: 200px;
+  }
+</style>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 ">
+        <ul class="nav nav-tabs nav-justified">
+          <li role="presentation" class="active"><a href="#">Home</a></li>
+          <li role="presentation"><a href="#">Profile</a></li>
+          <li role="presentation"><a href="#">Messages</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2 randomColor ads">
+
+      </div>
+      <div class="col-md-8 randomColor" id="posts">
+
+      </div>
+      <div class="col-md-2 randomColor ads">
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 randomColor footer">
+
+      </div>
+    </div>
+
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script>
+
+        function getRandomNumber(min, max) {
+          return Math.floor(Math.random() * max + min);
+        }
+        $(document).ready(function() {
+          var bodyColumns = $(".randomColor");
+          bodyColumns.each(function() {
+            $(this).css("background-color", "rgb(" + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + ")");
+          })
+          $("body").css("background-color", "rgb(" + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + ")");
+        })
+  </script>
+
+<script type="text/javascript">
+$("#posts").html(html);
+      /*
+              <div class="media">
+                <div class="media-left">
+                  <a href="#">
+                    <img class="media-object" src="" alt="post">
+                  </a>
+                </div>
+                <div class="media-body">
+                  <h4 class="media-heading"></h4>
+                </div>
+              </div>
+      */
+var myArray =[334, 745634, 657, 34, 766]
+
+var postsData =
+
+[
+{
+image: "images/profile1.jpg",
+subheading:"Something different",
+content:"aaaa aaaaa aaaaa aaaaa"
+},
+
+{
+image: "images/profile2.jpg",
+subheading:"Something different",
+content:"aaaa aaaaa aaaaa aaaaa"
+},
+
+{
+image: "images/profile3.jpg",
+subheading:"Something different",
+content:"aaaa aaaaa aaaaa aaaaa"
+},
+
+{
+image: "images/profile4.jpg",
+subheading:"Something different",
+content:"aaaa aaaaa aaaaa aaaaa"
+},
+
+{
+image: "images/profile5.jpg",
+subheading:"Something different",
+content:"aaaa aaaaa aaaaa aaaaa"
+},
+
+{
+image: "images/profile6.jpg",
+subheading:"Something different",
+content:"aaaa aaaaa aaaaa aaaaa"
+}
+];
+
+
+
+var myHtml = "";
+
+for(var i=0; i<postsData.length; i = i + 1){
+
+myHtml = myHtml + '<div class="media">'+
+    '<div class="media-left">'+
+      '<a href="#">'+
+        '<img class="media-object" src=" '+ postsData[i].image +'" alt="post">'+
+      '</a>'+
+    '</div>'+
+    '<div class="media-body">'+
+    '<h4 class="media-heading">' + postsData[i].subheading + '</h4>' +
+              postsData[i].content + '</div>' +
+              '</div>' ;
+}
+
+$(document).ready(function (){
+  $("#posts").html(myHtml);
+})
+
+</script>
+</body>
+
+</html>
