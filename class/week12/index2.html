@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Posts</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+
+</head>
+<style media="screen">
+  .footer {
+    height: 100px;
+    min-height: 100px;
+    max-height: 100px;
+  }
+  #posts {
+    min-height: 400px;
+  }
+  .ads {
+    height: 400px;
+    min-height: 400px;
+    max-height: 400px;
+  }
+</style>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 ">
+        <ul class="nav nav-tabs nav-justified">
+          <li role="presentation" class="active"><a href="#">Home</a></li>
+          <li role="presentation"><a href="#">Profile</a></li>
+          <li role="presentation"><a href="#">Messages</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2 randomColor ads">
+
+      </div>
+      <div class="col-md-8 randomColor" id="posts">
+
+      </div>
+      <div class="col-md-2 randomColor ads">
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 randomColor footer">
+
+      </div>
+    </div>
+
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script>
+
+        function getRandomNumber(min, max) {
+          return Math.floor(Math.random() * max + min);
+        }
+        $(document).ready(function() {
+          var bodyColumns = $(".randomColor");
+          bodyColumns.each(function() {
+            $(this).css("background-color", "rgb(" + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + ")");
+          })
+          $("body").css("background-color", "rgb(" + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + ")");
+        })
+  </script>
+
+<script type="text/javascript">
+
+
+
+var JSONUrl = "https://andersonguelphjs.github.io/class/week12/myJson.json";
+
+$.get(JSONUrl)
+            .done(function(data) {
+                console.log("success!");
+                console.dir(data);
+                var JSONData = data.query.results.channel; //make it easier to manage
+                console.dir(JSONData);
+                $(document).ready(function() {
+                    var myHtml = "";
+                    myHtml += '<div id="weatherContainer">';
+                    myHtml += '<i class="wi wi-day-' + JSONData.item.condition.text.toLowerCase() + ' font36"></i>';
+                    myHtml += '<div class="font24">' + JSONData.name.city + ', ' + JSONData.name.region + ' ' + JSONData.item.condition.temp + weatherData.units.temperature + '</div>';
+                    myHtml += '<div id="forecastContainer">';
+                    //https://demos.scotch.io/visual-guide-to-css3-flexbox-flexbox-playground/demos/
+                    for (var i = 1; i < 6; i++) {
+                        var item = JSONData.item.forecast[i];
+                        myHtml += '<div class="font16">';
+                        myHtml += '<div>' + item.day + ' ' + item.date + '</div>';
+                        myHtml += '<div>' + item.text + '</div>';
+                        myHtml += '<div>High: ' + item.high + ' Low: ' + item.low + '</div>';
+                        myHtml += '</div>';
+                    }
+                    myHtml += '</div>';
+                    myHtml += '</div>';
+                    $(document).ready(function(){
+                      $("#myContainer").html(myHtml);
+                    })
+                });
+                 })
+
+
+
+
+
+
+
+            .fail(function(data) {
+                console.log("fail!");
+                console.dir(data);
+            })
+
+
+
+
+</script>
+</body>
+
+</html>
